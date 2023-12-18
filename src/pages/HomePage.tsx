@@ -14,7 +14,13 @@ const HomePage = () => {
       <h1>Events</h1>
       <div className="flex flex-row flex-wrap justify-center">
         {events.map((event, index) => {
-          return <EventCard key={index} event={event} />;
+          return (
+            <EventCard
+              key={index}
+              event={event}
+              detailPath={`/detail/${index}`}
+            />
+          );
         })}
       </div>
     </>

@@ -4,6 +4,7 @@ export type EventType = {
   coverImage: string;
   date: string;
   description: {
+    long: [string];
     short: string;
   };
   dresscode: string;

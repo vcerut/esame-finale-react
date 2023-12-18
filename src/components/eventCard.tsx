@@ -1,11 +1,11 @@
 import "./eventCard.scss";
 import { EventType } from "../repo/events.type";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { getDetails } from "../repo";
 
 type EventCardType = {
   event: EventType;
-  //   detailPath: string;
+  detailPath: string;
 };
 
 const EventCard = ({ event, detailPath }: EventCardType) => {
@@ -19,7 +19,12 @@ const EventCard = ({ event, detailPath }: EventCardType) => {
       <p>{date}</p>
       <p>{dresscode}</p>
       <div></div>
-      <Link to={detailPath}>
+      <Link
+        to={detailPath}
+        onClick={() => {
+          getDetails(event.id);
+        }}
+      >
         <button>See details</button>
       </Link>
     </div>
