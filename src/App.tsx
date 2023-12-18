@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./App.css";
+import DetailPage from "./pages/DetailPage";
 
 const Homepage = lazy(() => import("./pages/HomePage"));
 
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Homepage />,
+  },
+  {
+    path: "detail/:id",
+    element: <DetailPage />,
   },
   {
     //wildcard match, percorso sempre da inserire per ultimo, nel caso in cui nessun altro path venga eseguito
