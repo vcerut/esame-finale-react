@@ -4,12 +4,12 @@ export type EventType = {
   coverImage: string;
   date: string;
   description: {
-    long: [string];
+    long: string[];
     short: string;
   };
   dresscode: string;
   price: number;
-  includedDrinks: [string];
-  tags: [string];
+  includedDrinks: string[];
+  tags: string[];
   isAperitivoIncluded: boolean;
 };

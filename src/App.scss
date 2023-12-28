@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+body {
+  background-color: black;
+  header {
+    width: 100%;
+    .header-image {
+      height: 32rem;
+      background: url(img/header.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      .logo {
+        height: 20rem;
+        width: 20rem;
+      }
+    }
+  }
+}
+
+.eventInfo {
+  background-color: rgba(0, 0, 0, 0.544);
+  padding: 3vh;
+}
