@@ -13,14 +13,16 @@ const HomePage = () => {
   return (
     <>
       <header>
-        <div className="w-full bg-cover bg-center">
-          <div className="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-20">
-            <img src={logo} alt="" className="logo" />
+        <div className='w-full bg-cover bg-center'>
+          <div className='flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-20 header-image'>
+            <img src={logo} alt='' className='logo' />
           </div>
         </div>
       </header>
-      <h1 className="my-5 uppercase font-semibold font-mono">Events</h1>
-      <div className="flex flex-col flex-wrap justify-center">
+      <h1 className='my-5 uppercase font-semibold font-mono'>
+        Upcoming Events
+      </h1>
+      <div className='flex flex-col flex-wrap justify-center'>
         {events.map((event, index) => {
           return (
             <EventCard
