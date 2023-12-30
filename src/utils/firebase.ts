@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getDatabase, ref, push } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,4 +15,18 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getDatabase(app);
+
+function writeReservation(email: string, eventId: string, time: string) {
+  const db = getDatabase(app);
+  const reference = ref(db, "details/" + eventId);
+
+  push(reference, {
+    email: email,
+    eventId: eventId,
+    time: time,
+  }).catch((error) => {
+    console.error("Error writing documents: ", error);
+  });
+}
+
+export default writeReservation;

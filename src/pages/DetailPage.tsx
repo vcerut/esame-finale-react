@@ -7,15 +7,13 @@ import { CiCalendar } from "react-icons/ci";
 import { PiTShirtThin } from "react-icons/pi";
 import { CiMoneyBill } from "react-icons/ci";
 import { BiDrink } from "react-icons/bi";
+import { FormModale } from "../components/modal";
 
 const DetailPage = () => {
   const { id } = useParams();
-  console.log(id);
   const { eventDetail, isLoading, setSlot } = useEventDetail();
 
   const [event, setEvent] = useState<EventDetailType>();
-
-  console.log(setSlot());
 
   const descriptionElements = event?.description.long.map((descriptionLong) => {
     return (
@@ -98,10 +96,15 @@ const DetailPage = () => {
         <h3 className='text-2xl text-[#018E42] uppercase font-semibold font-mono my-3'>
           Make a reservation
         </h3>
-        <div className='flex justify-center gap-x-5 flex.col md:flex-row'>
-          {slots.map((slot, index) => (
-            <button key={index}> {slot} </button>
-          ))}
+        <div className='flex justify-center gap-5 flex-col md:flex-row'>
+          {event?.id &&
+            slots.map((slot, index) => (
+              <div key={index}>
+                {/* <button> */}
+                <FormModale timeSlot={slot} eventId={event?.id.toString()} />
+                {/* </button> */}
+              </div>
+            ))}
         </div>
       </div>
     </>
