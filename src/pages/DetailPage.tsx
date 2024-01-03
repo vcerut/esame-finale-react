@@ -83,7 +83,7 @@ const DetailPage = () => {
             </span>
             <p>{drinksIncluded}</p>
           </div>
-          <div className='flex flex-row justify-center'>
+          <div className='flex flex-row md:justify-center'>
             <p>
               {eventDetail?.isAperitivoIncluded
                 ? "Aperitivo is included"

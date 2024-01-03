@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     //wildcard match, percorso sempre da inserire per ultimo, nel caso in cui nessun altro path venga eseguito
     path: "*",
     // element: <h1>404</h1>, //pagina di errore personalizzata, si può anche creare una pagina a parte per poi importarla
-    element: <Navigate to="/" />, //fallback redirect
+    element: <Navigate to='/' />, //fallback redirect
   },
 ]);
 
