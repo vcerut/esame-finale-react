@@ -8,6 +8,7 @@ import { PiTShirtThin } from "react-icons/pi";
 import { CiMoneyBill } from "react-icons/ci";
 import { BiDrink } from "react-icons/bi";
 import { FormModale } from "../components/modal";
+import Navbar from "../components/navbar";
 
 const DetailPage = () => {
   // const { id } = useParams();
@@ -50,6 +51,7 @@ const DetailPage = () => {
 
   return (
     <>
+      <Navbar />
       <div className='flex justify-center'>
         <img src={eventDetail?.coverImage} className='w-1/2 ' />
       </div>

@@ -1,4 +1,5 @@
 import EventCard from "../components/eventCard";
+import Navbar from "../components/navbar";
 import { UseEvents } from "../hooks/useEvents";
 import logo from "../img/ouroboros-logo.png";
 
@@ -12,6 +13,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Navbar />
       <header>
         <div className='w-full bg-cover bg-center'>
           <div className='flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-20 header-image'>

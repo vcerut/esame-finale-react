@@ -10,7 +10,12 @@ const Navbar = () => {
         </a>
       </div>
       <div className='flex flex-col justify-center'>
-        <a href='/login'>Login</a>
+        <a
+          href='/login'
+          className='text-white font-bold transition ease-in-out delay-150 hover:text-[#7EB2E1]'
+        >
+          Login
+        </a>
       </div>
     </nav>
   );

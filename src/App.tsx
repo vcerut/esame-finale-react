@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import "./App.scss";
 import DetailPage from "./pages/DetailPage";
+import ErrorPage from "./pages/ErrorPage";
+import Navbar from "./components/navbar";
 
 const Homepage = lazy(() => import("./pages/HomePage"));
 
@@ -22,16 +24,18 @@ const router = createBrowserRouter([
     //wildcard match, percorso sempre da inserire per ultimo, nel caso in cui nessun altro path venga eseguito
     path: "*",
     // element: <h1>404</h1>, //pagina di errore personalizzata, si può anche creare una pagina a parte per poi importarla
-    element: <Navigate to='/' />, //fallback redirect
+    element: <ErrorPage />, //fallback redirect
   },
 ]);
 
 function App() {
   return (
-    <Suspense fallback={<p>Waiting for lazy load</p>}>
-      {" "}
-      <RouterProvider router={router} />
-    </Suspense>
+    <>
+      <Suspense fallback={<p>Waiting for lazy load</p>}>
+        {" "}
+        <RouterProvider router={router} />
+      </Suspense>
+    </>
   );
 }
 
