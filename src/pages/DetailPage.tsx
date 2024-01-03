@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useEventDetail } from "../hooks/useEventDetail";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { EventDetailType } from "../repo/event.detail.type";
 
 import { CiCalendar } from "react-icons/ci";
@@ -10,7 +10,7 @@ import { BiDrink } from "react-icons/bi";
 import { FormModale } from "../components/modal";
 
 const DetailPage = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   const { eventDetail, isLoading, setSlot } = useEventDetail();
 
   const [event, setEvent] = useState<EventDetailType>();
