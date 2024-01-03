@@ -26,7 +26,7 @@ const EventCard = ({ event, detailPath }: EventCardType) => {
 
   return (
     <div className='event-card flex flex-col md:flex-row justify-between items-center'>
-      <img src={coverImage} className='w-100 md:w-[40%] mb-3 md:pb-0' />
+      <img src={coverImage} className='w-100 md:w-[40%] mb-3 md:mb-0 md:pb-0' />
       <div className='flex flex-col px-2 md:w-2/5 md:mr-24'>
         <h2 className='uppercase font-semibold font-mono'>{name}</h2>
 
