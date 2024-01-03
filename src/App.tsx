@@ -1,13 +1,8 @@
 import { Suspense, lazy } from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Navigate,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.scss";
 import DetailPage from "./pages/DetailPage";
 import ErrorPage from "./pages/ErrorPage";
-import Navbar from "./components/navbar";
 
 const Homepage = lazy(() => import("./pages/HomePage"));
 
