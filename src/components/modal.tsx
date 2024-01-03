@@ -23,20 +23,18 @@ export function FormModale(reservation: ReservationType) {
 
   return (
     <>
-      <Button className='bg-gray-900' onClick={handleOpen} variant='gradient'>
+      <Button className='bg-gray-900' onClick={handleOpen}>
         {timeSlot}
       </Button>
       <Dialog open={open} handler={handleOpen}>
-        <DialogHeader className='text-white'>
-          You have selected the {timeSlot} timeslot
-        </DialogHeader>
-        <DialogBody className='text-white'>
+        <DialogHeader>You have selected the {timeSlot} timeslot</DialogHeader>
+        <DialogBody>
           Please enter your email below to confirm your reservation.
           <form action='post' id='reservation'>
             <label htmlFor='email'>Email</label>
             <input
               type='text'
-              className='form-constrol'
+              className='form-control bg-white border border-gray-400 rounded-lg mx-2'
               id='email'
               name='email'
               required
@@ -49,7 +47,7 @@ export function FormModale(reservation: ReservationType) {
             variant='text'
             color='red'
             onClick={handleOpen}
-            className='mr-1 bg-gray-900 border border-red-500 text-red-500'
+            className='mr-1 border border-red-500 text-red-500'
           >
             <span>Cancel</span>
           </Button>
