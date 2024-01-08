@@ -33,7 +33,7 @@ export function FormModale(reservation: ReservationType) {
           <form action='post' id='reservation'>
             <label htmlFor='email'>Email</label>
             <input
-              type='text'
+              type='email'
               className='form-control bg-white border border-gray-400 rounded-lg mx-2'
               id='email'
               name='email'
