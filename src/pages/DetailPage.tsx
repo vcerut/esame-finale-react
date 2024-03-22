@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useEventDetail } from "../hooks/useEventDetail";
-// import { useParams } from "react-router-dom";
 import { EventDetailType } from "../repo/event.detail.type";
 
 import { CiCalendar } from "react-icons/ci";
@@ -32,6 +31,16 @@ const DetailPage = () => {
       </span>
     );
   });
+
+  const dishesIncluded = event?.includedDishes && event?.includedDishes.map((dish, index) => (
+    <div key={index} className="flex flex-row gap-x-3">
+      <div className="mx-5">
+        <p className="font-semibold">{dish.name}</p>
+        <p>{dish.description}</p>
+        <p>Allergens: {dish.allergens.join(", ")}</p>
+      </div>
+    </div>
+  ));
 
   const slots = setSlot();
 
@@ -93,6 +102,18 @@ const DetailPage = () => {
             </p>
           </div>
         </div>
+        {/* {eventDetail?.includedDishes && ( */}
+          <div className="flex flex-col">
+            <h3 className="mt-6 text-lg font-bold text-[#018E42]">
+              {dishesIncluded
+                ? "Hungry? Indulge in these delicious delicacies during the event!"
+                : "We apologize, but food is not included in this event."
+              }
+            </h3>
+            <div className="flex flex-row mt-5">{dishesIncluded}</div>
+          </div>
+        {/* )} */}
+
       </div>
       <div className='my-24'>
         <h3 className='text-2xl text-[#018E42] uppercase font-semibold font-mono my-3'>

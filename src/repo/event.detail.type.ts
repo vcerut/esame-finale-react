@@ -9,9 +9,16 @@ export type EventDetailType = {
   "includedDrinks": string[];
   "tags": string[];
   "isAperitivoIncluded": boolean;
+  "includedDishes": DishesType[];
 };
 
 export type DescriptionType = {
   "long": string[];
   "short": string;
 };
+
+export type DishesType = {
+  "name": string;
+  "description": string;
+  "allergens": string[];
+}
